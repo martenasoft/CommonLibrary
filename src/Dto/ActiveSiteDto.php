@@ -1,6 +1,6 @@
 <?php
 
-namespace MartenaSoft\SiteBundle\Dto;
+namespace MartenaSoft\CommonLibrary\Dto;
 
 class ActiveSiteDto
 {
