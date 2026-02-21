@@ -13,6 +13,8 @@ class DictionaryUser
         self::USER_ROLE
     ];
 
+    public const string REDIRECT_TO_AFTER_LOGIN = 'app_page_main';
+
     public const int STATUS_ACTIVE = 1;
     public const int STATUS_BLOCKED = 2;
     public const int STATUS_DELETED = 3;
