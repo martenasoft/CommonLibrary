@@ -2,7 +2,9 @@
 
 namespace MartenaSoft\CommonLibrary\Helper;
 
+use Psr\Log\LoggerInterface;
 use Symfony\Component\String\Slugger\AsciiSlugger;
+use Symfony\Component\Uid\Uuid;
 
 class StringHelper
 {
@@ -48,5 +50,20 @@ class StringHelper
             $slug = '';
         }
         return $slug;
+    }
+
+    public static function exceptionLoggerHelper(string $message, \Throwable $exception, LoggerInterface $logger): void
+    {
+        $logger->error($message, [
+            'message' => $exception->getMessage(),
+            'file' => $exception->getFile(),
+            'line' => $exception->getLine(),
+            'trace' => $exception->getTraceAsString()
+        ]);
+    }
+
+    public static function getRandomUuid(): Uuid
+    {
+        return Uuid::v4();
     }
 }

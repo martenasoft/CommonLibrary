@@ -1,1 +1,1 @@
-# MartenaSoft SimleSymfonyWebAppSite Common library
+# This Common Library for the SimpleSymfonyWebAppSite
