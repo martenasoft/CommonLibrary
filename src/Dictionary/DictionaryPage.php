@@ -11,6 +11,7 @@ class DictionaryPage
     public const string PAGE_TYPE_VALUE = 'page';
     public const string SECTION_TYPE_VALUE = 'section';
     public const string CONTROLLER_ROUTE_TYPE_VALUE = 'controller';
+
     public const array TYPES = [
         self::PAGE_TYPE => self::PAGE_TYPE_VALUE,
         self::SECTION_TYPE => self::SECTION_TYPE_VALUE,

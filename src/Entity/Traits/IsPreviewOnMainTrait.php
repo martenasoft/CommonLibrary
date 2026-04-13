@@ -10,7 +10,7 @@ trait IsPreviewOnMainTrait
     #[ORM\Column]
     private ?bool $isPreviewOnMain = false;
 
-    public function isIsPreviewOnMain(): ?bool
+    public function isPreviewOnMain(): ?bool
     {
         return $this->isPreviewOnMain;
     }
