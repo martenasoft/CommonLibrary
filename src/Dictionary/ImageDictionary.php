@@ -4,6 +4,10 @@ namespace MartenaSoft\CommonLibrary\Dictionary;
 
 class ImageDictionary
 {
+    public const string UPLOAD_PATH = "/image/upload";
+
+    public const string UPLOAD_KEY = "eqm9u()8fe%%j#v!)ud__nj9qb#5-n9m5o%l2yrww8r+0@bpx8";
+
     public const string TYPE_PAGE = 'page';
     public const int TYPE_PAGE_INDEX = 1;
     public const string TYPE_USER = 'user';

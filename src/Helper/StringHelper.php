@@ -5,6 +5,8 @@ namespace MartenaSoft\CommonLibrary\Helper;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\String\Slugger\AsciiSlugger;
 use Symfony\Component\Uid\Uuid;
+use Symfony\Component\Uid\UuidV4;
+use function Symfony\Component\String\u;
 
 class StringHelper
 {
@@ -58,12 +60,24 @@ class StringHelper
             'message' => $exception->getMessage(),
             'file' => $exception->getFile(),
             'line' => $exception->getLine(),
-            'trace' => $exception->getTraceAsString()
+            'trace' => $exception->getTraceAsString(),
         ]);
     }
 
     public static function getRandomUuid(): Uuid
     {
         return Uuid::v4();
+    }
+
+    public static function toUuid(string $uuid): Uuid
+    {
+        return UuidV4::fromString($uuid);
+    }
+
+    public static function classNameToRoute(string $className, bool $isSlug = true): string
+    {
+        $class = basename(str_replace('\\',  '/', $className));
+        $result = u($class)->snake()->toString();
+        return $isSlug ? self::slug($result) : $result;
     }
 }
