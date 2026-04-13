@@ -2,10 +2,6 @@
 
 namespace MartenaSoft\CommonLibrary\Traits;
 
-use Doctrine\ORM\EntityManagerInterface;
-use MartenaSoft\CommonLibrary\Dto\ActiveSiteDto;
-use MartenaSoft\CommonLibrary\Entity\Interfaces\PositionInterface;
-use MartenaSoft\PageBundle\Entity\Page;
 use Symfony\Component\HttpFoundation\Request;
 
 trait AdminControllerTrait
